@@ -11,3 +11,9 @@ vscode:
     - ms-python.python
     - hashicorp.terraform
     - amazonwebservices.aws-toolkit-vscode
+    - 42crunch.vscode-openapi
+    - ms-azuretools.vscode-docker
+    - ms-toolsai.jupyter
+    - ms-toolsai.vscode-jupyter-cell-tags
+    - ms-toolsai.vscode-jupyter-slideshow
+    - redhat.ansible
