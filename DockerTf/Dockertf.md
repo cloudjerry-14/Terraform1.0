@@ -16,3 +16,31 @@ Initialize the provider
 provider "docker" { }
 
 ```
+Let create a docker image resource
+```
+resource "docker_image" "node" {
+    name="nodered/node-red:latest"
+  
+}
+```
+Run the 3 terraform command to verfy image is being successfully pulled
+```
+terraform init
+```
+image.png
+
+ review the plan 
+```
+terraform plan
+
+```
+image.png
+
+Create the infrastructure
+```
+terraform apply
+
+```
+
+image.png
+
