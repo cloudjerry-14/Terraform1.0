@@ -19,15 +19,14 @@ resource "docker_image" "node" {
     name="nodered/node-red:latest"
   
 }
-# resource "docker_container" "nodecontainer" {
-#   count = 2
-#   name=join("-",["nodecontainer",random_string.name[count.index].result])
-#   image=docker_image.node.latest
-#   ports{
-#     # external=1880
-#     internal=1880
-#   }
-# }
+resource "docker_container" "nodecontainer" {
+  name="mycontainer"
+  image=docker_image.node.latest
+  ports{
+    external=1880
+    internal=1880
+  }
+}
 # output "Ip" {
 #   value = docker_container.nodecontainer.ip_address
 #   description = "tis is cintainer ip"

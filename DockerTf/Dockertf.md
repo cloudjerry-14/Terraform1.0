@@ -44,3 +44,22 @@ terraform apply
 
 image.png
 
+Now lets create a container resource 
+```
+resource "docker_container" "nodecontainer" {
+  name="mycontainer"
+  image=docker_image.node.latest
+  ports{
+    external=1880
+    internal=1880
+  }
+}
+```
+```
+terraform apply
+
+```
+image.png
+
+
+
